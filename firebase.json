@@ -1,0 +1,50 @@
+{
+	"hosting": {
+		"site": "archpack-v1-8ce09",
+		"public": "public",
+		"ignore": [
+			"firebase.json",
+			"**/.*",
+			"**/node_modules/**"
+		],
+		"headers": [
+			{
+				"source": "**/*",
+				"headers": [
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "*"
+					}
+				]
+			},
+			{
+				"source": "**/*.@(webp|png|js|css|woff|woff2)",
+				"headers": [
+					{
+						"key": "Cache-Control",
+						"value": "31536000"
+					}
+				]
+			},
+			{
+				"source": "**/*",
+				"headers": [
+					{
+						"key": "Access-Control-Allow-Methods",
+						"value": "GET, POST, OPTIONS"
+					}
+				]
+			},
+			{
+				"source": "**/*",
+				"headers": [
+					{
+						"key": "Access-Control-Allow-Headers",
+						"value": "Origin, X-Api-Key, X-Requested-With, Content-Type, Accept, Authorization"
+					}
+				]
+			}
+		],
+		"cleanUrls": true
+	}
+}
